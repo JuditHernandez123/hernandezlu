@@ -43,7 +43,7 @@
                     <form action="php/login_usuario_be.php" method="POST" class="formulario__login">
                         <h2>Iniciar Sesión</h2>
                         <input type="text" placeholder="Correo Electronico" name="correo">
-                        <input type="text" placeholder="Contraseña" name="contrasena">
+                        <input type="password" placeholder="Contraseña" name="contrasena">
                         <button>Entrar</button>
                     </form>
                     <!-- registro -->
