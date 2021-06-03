@@ -1,17 +1,16 @@
 <?php
 
-    class conexion{
-            
             $user = 'root';
             $password = '';
-            
-            $conexion = new PDO('sqlsvr:Server=localhost; Database=hernandezlu, $user, $password');
-    }
+    
+            $conexion = new PDO('mysql:host=localhost;dbname=hernandezlu', $user, $password);
 
-if($conexion){
-    echo "Conectado a la base de datos";
-}else{
-    echo "No está conectado a la base de datos";
-}
+            foreach ($conexion->query("SELECT * FROM  alumnos") as $row) {
+                print "{$row['ID']}  \t";
+                print $row['Nombre'] . "\t";
+                print $row['Apellido'] . "\t";
+                print $row['Semestre'] . "\t";
+                print $row['Promedio'] . "\n";
+            }
 
 ?>
