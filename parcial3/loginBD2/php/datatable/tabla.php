@@ -16,27 +16,20 @@
     <title>Alumnos</title>
 </head>
 <body>
-<!-- <div class="btn-group" role="group" aria-label="Basic outlined example">
-  <button type="button" class="btn btn-outline-primary">Left</button>
-  <button type="button" class="btn btn-outline-primary">Middle</button>
-  <button type="button" class="btn btn-outline-primary">Right</button>
-</div> -->
 
-<button onclick="window.location.href='Agregar.php'" style="width:100px; height:40px; FONT-SIZE: 12px; FONT-FAMILY: arial black; BACKGROUND-COLOR: red">Continue</button><br><br>
+
 <!-- Botón para Agregar un registro -->
-<div class="button">
-				<a href="Agregar.php" class="btn btn-primary">Agregar</a><br><br>
-</div>    
+<button type="button" class="btn btn-primary btn-lg" onClick="window.location.href='Agregar.php'">Agregar</button>
+
 <!-- Botón para Editar un registro -->
-<div class="button">
-				<a href="editar.php" class="btn btn-primary">Editar</a><br><br>			
-</div>
+<button type="button" class="btn btn-primary btn-lg" onClick="window.location.href='editar.php'">Editar</button>
+
 <!-- Botón para Eliminar un registro -->
-<div class="button">
-				<a href="borrar.php" class="btn btn-primary">Borrar</a><br><br>
+<button type="button" class="btn btn-primary btn-lg" onClick="window.location.href='borrar.php'">Eliminar</button>
+
 <!-- Botón para Cerrar sesion -->
-<div class="button">
-				<a href="cerrar_sesion.php" class="btn btn-primary">Cerrar Sesión</a>	
+<button type="button" class="btn btn-primary btn-lg" onClick="window.location.href='../cerrar_sesion.php'">Cerrar Sesión</button>
+
 
 <table class="table">
   <thead>
