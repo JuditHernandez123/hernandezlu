@@ -16,7 +16,8 @@
     <title>Alumnos</title>
 </head>
 <body>
-
+<script type="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 <!-- Botón para Agregar un registro -->
 <button type="button" class="btn btn-primary btn-lg" onClick="window.location.href='Agregar.php'" id="btn__agregar">Agregar</button>
@@ -26,7 +27,7 @@
 <!-- Botón para Cerrar sesion -->
 <button type="button" class="btn btn-primary btn-lg" onClick="window.location.href='../cerrar_sesion.php'" >Cerrar Sesión</button>
 
-</script>
+
 <table class="table table-hover">
   <thead>
     <tr>
@@ -44,7 +45,7 @@
         
         while($row=mysqli_fetch_array($query)){
   ?>
-    <tr>
+    <tr style="cursor: pointer" onclick="seleccionar(this.ID)">
       <th scope="row"><?php echo $row['ID']?></th>
       <td><?php echo $row['Nombre']?></td>
       <td><?php echo $row['Apellido']?></td>
@@ -61,6 +62,13 @@
 </table>
 
 
-</div>  
+</div> 
+<script>
+  $(function(){
+    $("table tr").click(function () {
+      alert (this.rowIndex);
+    })
+  })
+</script> 
 </body>
 </html>
