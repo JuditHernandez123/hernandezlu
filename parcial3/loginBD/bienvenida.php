@@ -23,6 +23,7 @@
 </head>
 <body>
     <h1>Bienvenido!!</h1>
-    <a href="php/cerrar_sesion.php">Cerrar sesión</a>
+    
+    <a href="php/cerrar_sesion.php" <??>Cerrar sesión</a>
 </body>
 </html>
