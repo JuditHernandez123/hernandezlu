@@ -19,26 +19,24 @@
 
 
 <!-- Botón para Agregar un registro -->
-<button type="button" class="btn btn-primary btn-lg" onClick="window.location.href='Agregar.php'">Agregar</button>
+<button type="button" class="btn btn-primary btn-lg" onClick="window.location.href='Agregar.php'" id="btn__agregar">Agregar</button>
 
-<!-- Botón para Editar un registro -->
-<button type="button" class="btn btn-primary btn-lg" onClick="window.location.href='editar.php'">Editar</button>
 
-<!-- Botón para Eliminar un registro -->
-<button type="button" class="btn btn-primary btn-lg" onClick="window.location.href='borrar.php'">Eliminar</button>
 
 <!-- Botón para Cerrar sesion -->
-<button type="button" class="btn btn-primary btn-lg" onClick="window.location.href='../cerrar_sesion.php'">Cerrar Sesión</button>
+<button type="button" class="btn btn-primary btn-lg" onClick="window.location.href='../cerrar_sesion.php'" >Cerrar Sesión</button>
 
-
-<table class="table">
+</script>
+<table class="table table-hover">
   <thead>
     <tr>
+
       <th scope="col">ID</th>
       <th scope="col">Nombre</th>
       <th scope="col">Apellido</th>
       <th scope="col">Semestre</th>
       <th scope="col">Promedio</th>
+
     </tr>
   </thead>
   <tbody>
@@ -52,6 +50,9 @@
       <td><?php echo $row['Apellido']?></td>
       <td><?php echo $row['Semestre']?></td>
       <td><?php echo $row['Promedio']?></td>
+      <th><a href="editar.php? id=<?php echo $row['ID']?> & nombre=<?php echo $row['Nombre']?> & apellido=<?php echo $row['Apellido']?> & semestre=<?php echo $row['Semestre']?> & promedio=<?php echo $row['Promedio']?>" class="btn btn_info">Editar</a>
+      <th><a href="borrar.php? id=<?php echo $row['ID']?>" class="btn btn_info">Borrar</a>
+      
     </tr>
     <?php 
         }
